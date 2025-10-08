@@ -1,0 +1,17 @@
+# values.yaml
+
+frontend:
+  replicaCount: 1
+  image:
+    repository: shikhrshukla/mern-sample-app-frontend
+    tag: latest
+
+backend:
+  replicaCount: 1
+  image:
+    repository: shikhrshukla/mern-sample-app-backend
+    tag: latest
+
+ingress:
+  host: shikhar.sample.com
+  path: /

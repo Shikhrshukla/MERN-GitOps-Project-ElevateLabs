@@ -1,0 +1,42 @@
+version: '3.6'
+services:
+  ui:
+    build:
+      context: ./Ui
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - mern
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+    networks:
+      - mern
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - data:/data/db
+    networks:
+      - mern
+
+volumes:
+  data:
+
+networks:
+  mern:
+    driver: bridge
