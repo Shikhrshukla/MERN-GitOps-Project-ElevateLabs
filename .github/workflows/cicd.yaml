@@ -6,10 +6,10 @@ on:
     push:
         branches:
             - main
-    path-ignore:
-        - 'README.md'
-        - 'helm/**'
-        - 'k8s/**'
+        path-ignore:
+            - 'README.md'
+            - 'helm/**'
+            - 'k8s/**'
 
 jobs:
     build:
@@ -63,7 +63,7 @@ jobs:
                 context: ./Ui
                 file: ./Ui/Dockerfile
                 push: true
-                tags: ${{ DOCKER_USERNAME }}/mern-sample-app-frontend:${{ github.run_id }}
+                tags: ${{ secrets.DOCKER_USERNAME }}/mern-sample-app-frontend:${{ github.run_id }}
             
             - name: Build and Push Backend Image
               uses: docker/build-push-action@v6
@@ -71,7 +71,7 @@ jobs:
                 context: ./server
                 file: ./server/Dockerfile
                 push: true
-                tags: ${{ DOCKER_USERNAME }}/mern-sample-app-backend:${{ github.run_id }}
+                tags: ${{ secrets.DOCKER_USERNAME }}/mern-sample-app-backend:${{ github.run_id }}
         
     updating_latest_tag-in-helm-chart:
             needs: docker_build_and_push
