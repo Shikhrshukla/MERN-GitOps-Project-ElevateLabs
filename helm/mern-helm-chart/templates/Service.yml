@@ -3,14 +3,14 @@ kind: Service
 metadata:
   name: mern-app-frontend
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: frontend
   ports:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-
+      nodePort: 32320
 ---
 
 apiVersion: v1

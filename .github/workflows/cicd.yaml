@@ -1,12 +1,10 @@
-# CI pipeline for github actions the updating the images on docker hub
-
 name: CI Pipeline with ArgoCD
 
 on:
     push:
         branches:
             - main
-        path-ignore:
+        paths-ignore:
             - 'README.md'
             - 'helm/**'
             - 'k8s/**'
@@ -80,11 +78,13 @@ jobs:
     updating_latest_tag-in-helm-chart:
             needs: docker_build_and_push
             runs-on: ubuntu-latest
+            permissions:
+                contents: write
             steps:
                 - name: Checkout code
                   uses: actions/checkout@v5
                   with:
-                    token: ${{ secrets.GITHUB_TOKEN }}
+                    token: ${{ secrets.TOKEN_GIT }}
                 - name: Update Helm Chart with Latest Image Tag
                   run: |
                     sed -i "s|tag: .*|tag: ${{ github.run_id }}|g" ./helm/mern-helm-chart/values.yaml
