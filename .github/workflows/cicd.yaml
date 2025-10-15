@@ -1,4 +1,4 @@
-name: CI Pipeline with ArgoCD
+name: CI Pipeline + ArgoCD
 
 on:
     push:
