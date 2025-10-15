@@ -65,7 +65,7 @@ jobs:
                 context: ./Ui
                 file: ./Ui/Dockerfile
                 push: true
-                tags: ${{ secrets.DOCKER_USERNAME }}/mern-sample-app-frontend:${{ github.run_id }}
+                tags: ${{ secrets.DOCKER_USERNAME }}/mern-sample-app-frontend:${{ github.sha }}
             
             - name: Build and Push Backend Image
               uses: docker/build-push-action@v6
@@ -73,7 +73,7 @@ jobs:
                 context: ./server
                 file: ./server/Dockerfile
                 push: true
-                tags: ${{ secrets.DOCKER_USERNAME }}/mern-sample-app-backend:${{ github.run_id }}
+                tags: ${{ secrets.DOCKER_USERNAME }}/mern-sample-app-backend:${{ github.sha }}
         
     updating_latest_tag-in-helm-chart:
             needs: docker_build_and_push
@@ -87,7 +87,7 @@ jobs:
                     token: ${{ secrets.TOKEN_GIT }}
                 - name: Update Helm Chart with Latest Image Tag
                   run: |
-                    sed -i "s|tag: .*|tag: ${{ github.run_id }}|g" ./helm/mern-helm-chart/values.yaml
+                    sed -i "s|tag: .*|tag: ${{ github.sha }}|g" ./helm/mern-helm-chart/values.yaml
                 - name: Commit and Push Changes
                   run: |
                     git config --global user.name 'Shikhrshukla'
