@@ -4,13 +4,13 @@ frontend:
   replicaCount: 1
   image:
     repository: shikhrshukla/mern-sample-app-frontend
-    tag: latest
+    tag: 17521e0a62c805b4ab5d84f3a373473a3875ad23
 
 backend:
   replicaCount: 1
   image:
     repository: shikhrshukla/mern-sample-app-backend
-    tag: latest
+    tag: 17521e0a62c805b4ab5d84f3a373473a3875ad23
 
 ingress:
   host: shikhar.sample.com
