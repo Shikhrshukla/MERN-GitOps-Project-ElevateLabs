@@ -20,6 +20,18 @@ A MERN (MongoDB, Express, React, Node) sample application delivered with a GitOp
 - GitHub account + Docker Hub account (for CI to push to)
 - Optional: Argo CD CLI if you want to work with Argo locally
 
+#### ArgoCD Server Installation
+```bash
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+sleep 100
+argocd admin initial-password -n argocd
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+```
+
+Access the ArgoCD Server at ```localhost:8080```, Login as 'admin' username and given password
+
+
 ### 1. Clone repository
 ```bash
 git clone https://github.com/Shikhrshukla/MERN-GitOps-Project-ElevateLabs.git
