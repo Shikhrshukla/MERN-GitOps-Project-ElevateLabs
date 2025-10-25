@@ -1,9 +1,11 @@
 
-# GitOpsify Three-Tier MERN Deployment
+# GitOpsify Three-Tier MERN Deployment -- ElevateLabs
 
 **SUMMARY:** 
 A MERN (MongoDB, Express, React, Node) sample application delivered with a GitOps workflow: Docker images built in GitHub Actions, images pushed to Docker Hub, and a Helm chart reconciled by Argo CD on a local kind Kubernetes cluster.
 
+#### NOTE : ElevateLabs Project Phase:
+> I chosen Project #4 _`CI/CD Pipeline with GitHub Actions & Docker`_ and Project #10 _`GitOps Workflow using ArgoCD on Kubernetes`_ and combined them into a single end-to-end deliverable: a GitHub Actions pipeline that builds, tests and pushes Docker images, updates Helm values, and a GitOps layer (Argo CD + Helm) that automatically deploys those images to a local Kubernetes cluster (kind/minikube). The combined project demonstrates the full flow : commit → CI → image registry → Git → Argo CD → cluster and includes the CI workflow, Helm chart, Kubernetes manifests, and documentation so the setup can be reproduced and evaluated.
 ---
 
 ## How to set this project up locally - step by step (commands only)
