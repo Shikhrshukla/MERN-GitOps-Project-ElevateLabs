@@ -255,3 +255,93 @@ This project is an end‑to‑end demonstration of how to build, package, and co
 6. Store TLS certs as Kubernetes secrets or use SealedSecrets/cert-manager; never push certs to the repo.
 
 ---
+
+## Screenshots
+
+### Local Build Output (Frontend)
+<img width="1919" height="957" alt="1" src="https://github.com/user-attachments/assets/78de63cf-e82a-46cb-aa61-2d00c1227776" />
+
+### Local Build Output (Backend) 
+<img width="1919" height="957" alt="2" src="https://github.com/user-attachments/assets/e279b631-d1cd-450a-b6cf-1bc5d9b919ff" />
+
+### Docker Compose Up Output 
+<img width="1920" height="1002" alt="3" src="https://github.com/user-attachments/assets/b5a7dabc-7bb0-437b-9212-8561c406dee3" />
+
+### kind Cluster Creation Output 
+<img width="1919" height="961" alt="4" src="https://github.com/user-attachments/assets/1d945da2-0d40-4d2e-9c72-21993f0d1c4e" />
+
+### kubectl get all -n default
+<img width="1919" height="960" alt="5" src="https://github.com/user-attachments/assets/876b19bf-7854-4408-bb9b-2656293fd3ad" />
+
+### Ingress Controller Pod Logs 
+<img width="1920" height="954" alt="6a" src="https://github.com/user-attachments/assets/b5c6280d-43f0-4be4-b57e-f4e5df15b87e" />
+<img width="1920" height="954" alt="6b" src="https://github.com/user-attachments/assets/c2559fe5-72ef-4301-96ec-22fc5a804d3a" />
+
+### Frontend Pod Logs
+<img width="1919" height="957" alt="7" src="https://github.com/user-attachments/assets/72061c25-0380-4c17-9713-ce71993532b1" />
+
+### Backend Pod Logs
+<img width="1919" height="957" alt="8" src="https://github.com/user-attachments/assets/6754f8c2-d3c7-41ee-a772-eca745a5d21a" />
+
+### MongoDB Pod Logs
+<img width="1919" height="957" alt="9" src="https://github.com/user-attachments/assets/20c9351d-30e7-47cd-aea6-3631b1671862" />
+
+### Argo CD Components and Port Forwarding
+<img width="1919" height="961" alt="10a" src="https://github.com/user-attachments/assets/85d8935d-a100-4b31-a4ab-761601b79f4d" />
+<img width="1919" height="367" alt="10b" src="https://github.com/user-attachments/assets/bc873dc3-6e57-45c7-95b4-105bc3fcc19c" />
+
+### Argo CD Application Overview (UI)
+<img width="1919" height="965" alt="11a" src="https://github.com/user-attachments/assets/c3a6fc3d-7942-4751-a5d8-be3e26fc1da2" />
+<img width="1919" height="965" alt="11b" src="https://github.com/user-attachments/assets/e7e3add7-7e65-42b5-8df7-15de79589023" />
+<img width="1919" height="965" alt="11c" src="https://github.com/user-attachments/assets/9d1ae2dd-7d36-4131-a46e-28bff3a571bf" />
+<img width="1919" height="965" alt="11d" src="https://github.com/user-attachments/assets/afb3113d-57eb-4f8b-aea8-df31fb7b801d" />
+
+### Argo CD Sync History / Events
+<img width="1919" height="957" alt="12" src="https://github.com/user-attachments/assets/83db6408-a3b1-4199-9bd9-55776c53d2f9" />
+
+### Github Repository
+<img width="1919" height="965" alt="13" src="https://github.com/user-attachments/assets/39e82ca2-1633-4984-8a02-53b3eb429373" />
+
+### GitHub Actions Workflow Run (Summary)
+<img width="1919" height="965" alt="14" src="https://github.com/user-attachments/assets/2c7c2035-08a7-49ca-b84c-1ff47679f8e7" />
+
+### Docker Hub Repository (Image Tags)
+<img width="1919" height="965" alt="15a" src="https://github.com/user-attachments/assets/babaf2f9-2d5e-4649-9e1e-98408b5d9820" />
+<img width="1919" height="965" alt="15b" src="https://github.com/user-attachments/assets/6b0328ed-2015-4b89-9889-a8d6f66eb007" />
+
+### Ingress Controller Installed on Cluster
+<img width="1919" height="965" alt="16" src="https://github.com/user-attachments/assets/14e59a67-2252-4163-bca7-acb920a9793f" />
+
+### Ingress Controller Port-forwarding
+<img width="1919" height="964" alt="17" src="https://github.com/user-attachments/assets/f06f0857-53a7-4af2-b8be-b617169c28ff" />
+
+### HTTPS Acces (Browser Warning)
+<img width="1919" height="952" alt="18a" src="https://github.com/user-attachments/assets/2770acc7-fd23-4b5c-8438-91b0a2ce4912" />
+<img width="1915" height="362" alt="18b" src="https://github.com/user-attachments/assets/87337f56-56bd-419b-b0d9-88eb5ca0100e" />
+<img width="1920" height="559" alt="18c" src="https://github.com/user-attachments/assets/afd653aa-8ae5-4263-b1c3-fa8d6a2a35ac" />
+
+### TLS Secret in Kubernetes (kubectl get secret)
+<img width="1140" height="403" alt="19a" src="https://github.com/user-attachments/assets/8366eb52-28ac-4635-996d-fb6c286db87f" />
+<img width="1920" height="1049" alt="19b" src="https://github.com/user-attachments/assets/34871f41-bda3-4d0d-89f5-56b414dd18d2" />
+
+### Application/Website Work
+<img width="1919" height="1045" alt="20a" src="https://github.com/user-attachments/assets/8b5a7db6-6b79-4b2f-ac82-695c0e043c26" />
+<img width="1919" height="1045" alt="20b" src="https://github.com/user-attachments/assets/af5f09fb-710f-4eaa-806f-9e7e9857f598" />
+<img width="1919" height="1045" alt="20c" src="https://github.com/user-attachments/assets/732b39d4-73c8-4d21-ba79-8d88306cfe42" />
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
